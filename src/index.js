@@ -4,5 +4,7 @@ import App from './components/App';
 // // import CSS from '/public/styles.css';
 // import CSS from '/Users/macuser/lighthouse/lighthouse/public/styles.css';
 // import CSS from '../public/styles.css';
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));

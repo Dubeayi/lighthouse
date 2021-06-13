@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button, Container, Row, Column } from 'react-bootstrap';
+import Clouds from './webPages/Clouds';
 import NavigationalMenu from './NavigationalMenu';
 import AboutUs from './webPages/AboutUs';
 import ContactUs from './webPages/ContactUs';
@@ -66,12 +68,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <NavigationalMenu pageSelected={this.state} pageRender={this.pageRender} />
+        <Clouds />
+      <Container className="mainBody">
+        <Row>
+          <NavigationalMenu pageSelected={this.state} pageRender={this.pageRender} />
+        </Row>
         { this.loadPage()}
-        {/* <div id="gridRow1">gridRow1</div>
-        <div id="gridColumn1">gridColumn1</div>
-        <div id="gridRow2"> gridRow2</div>
-        <div id="gridColumn2">gridColumn2</div> */}
+      </Container>
       </div>
     );
   }
