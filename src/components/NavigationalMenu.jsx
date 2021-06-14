@@ -1,11 +1,11 @@
 import React from 'react';
-import AboutUs from './webPages/AboutUs';
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import AboutUs from './webPages/AboutUs';
 
 function NavigationalMenu(props) {
-  let pageRender = props.pageRender;
+  const {pageRender} = props;
   return (
-    <Container>
+    <Container className="navMenu">
       <Row>
         {/* <Col>
           <div className="logo" value="Home">
@@ -14,13 +14,11 @@ function NavigationalMenu(props) {
         </Col> */}
         <Col>
         <ul className="navigation-list">
-          {/* <li className="navigation-item"><button value="Services" onClick= {() => console.log(event.target.value)}>Services</button></li> */}
           <li className="navigation-item"><button value="Services" onClick={props.pageRender}>Services</button></li>
-          {/* <li className="navigation-item"><button onClick= {pageRender}>Services</button></li> */}
-          <li className="navigation-item"><a href="#">Virtual Tour</a></li>
-          <li className="navigation-item"><a href="#">Contact Us</a></li>
-          <li className="navigation-item"><a href="#">Pricing</a></li>
-          <li className="navigation-item"><a href="#">About Lighthouse</a></li>
+          <li className="navigation-item"><button value="VirtualTour" onClick={props.pageRender}>Virtual Tour</button></li>
+          <li className="navigation-item"><button value="ContactUs" onClick={props.pageRender}>Contact Us</button></li>
+          <li className="navigation-item"><button value="Pricing" onClick={props.pageRender}>Pricing</button></li>
+          <li className="navigation-item"><button value="AboutUs" onClick={props.pageRender}>About Lighthouse</button></li>
         </ul>
         </Col>
       </Row>

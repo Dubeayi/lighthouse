@@ -55,6 +55,10 @@ body {
   color: black;
 }
 
+.navMenu {
+  border-bottom: groove;
+}
+
 #clouds {
   position: absolute;
   z-index: -1;
@@ -126,11 +130,13 @@ button:active {
 
 .mainBody {
   display: flex;
-  flex-flow: wrap;
   width: 100%;
+  flex-flow: column;
+  flex-wrap: wrap;
 }
 .home {
-  display: flex
+  display: flex;
+  background-color: salmon;
 }
 
 .logo {

@@ -22,11 +22,11 @@ class App extends React.Component {
     this.loadPage = this.loadPage.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     page: Home
-  //   });
-  // }
+  componentDidMount() {
+    this.setState({
+      page: Home,
+    });
+  }
 
   onClick() {
     this.setState({
@@ -68,12 +68,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Clouds />
+        {/* <Clouds /> */}
+        {/* {this.state.page === Home ? <Clouds /> : console.log(this.state.page)} */}
       <Container className="mainBody">
         <Row>
           <NavigationalMenu pageSelected={this.state} pageRender={this.pageRender} />
         </Row>
+        <Row>
         { this.loadPage()}
+        </Row>
       </Container>
       </div>
     );
